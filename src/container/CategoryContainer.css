@@ -1,0 +1,8 @@
+.card-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 10px 0px;
+    background-color: rgba(128, 106, 92, 0.249);
+}
+
