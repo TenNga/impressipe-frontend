@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './SearchBar.css'
 
 class SearchBar extends Component {
     state = {  }
@@ -6,8 +7,8 @@ class SearchBar extends Component {
         return ( 
             <div>
                 <form>
-                    <input type="text" placeholder="Search Recipe" />
-                    <input type="submit" value="search" />
+                    <input id="search-field" type="text" placeholder="Search Recipe" />
+                    <input id="submit-btn" type="submit" value="search" />
                 </form>
             </div> 
         );

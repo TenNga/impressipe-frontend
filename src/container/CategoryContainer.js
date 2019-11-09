@@ -1,5 +1,5 @@
 import React from 'react'
-import RecipeCard from './RecipeCard'
+import RecipeCard from '../component/RecipeCard'
 import './CategoryContainer.css'
 
 const CategoryContainer = () => {
@@ -9,8 +9,12 @@ const CategoryContainer = () => {
         return recipes.map(r => <RecipeCard />)
     }
     return (
+        <div className="category-container">
+            <h3>Healthy Recipe</h3>
         <div className="card-container">
+            
             {renderRecipeCard()}
+        </div>
         </div>
     )
 }

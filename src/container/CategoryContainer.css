@@ -2,7 +2,16 @@
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    
+    
+}
+.category-container{
     margin: 10px 0px;
+    padding: 0px 10px;
+    text-align: left;
     background-color: rgba(128, 106, 92, 0.249);
+}
+.category-container h3{
+    margin-left: 10px;
 }
 

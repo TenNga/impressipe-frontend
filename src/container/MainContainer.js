@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CarouselContainer from "./CarouselContainer"
 import MainRecipeContainer from './MainRecipeContainer';
 
-const MainComtainer = () => {
+const MainContainer = () => {
     return(
         <div className="main-container" >
             <CarouselContainer />
@@ -10,4 +10,4 @@ const MainComtainer = () => {
         </div>
     )
 }
-export default MainComtainer;
+export default MainContainer;
