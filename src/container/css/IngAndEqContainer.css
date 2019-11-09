@@ -15,14 +15,20 @@
     
 }
 .ingredientList h4, .equipmentList h4{
-    height: 10%;
+    background-image: url(https://st3.depositphotos.com/1558912/19051/i/1600/depositphotos_190518736-stock-photo-food-cooking-ingredients-background-on.jpg);
+    background-position-y: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20%;
     padding: 0px;
-    
+    text-shadow: 1px 1px #30302f5f;
+    border-radius: 7px 7px 0px 0px;
 }
 .ingredientList ul, .equipmentList ul{
-    height: 90%;
+    text-shadow: 5px blue;
+    height: 80%;
     padding: 10px;
-    border-radius: 7px;
+    border-radius: 0px 0px 7px 7px;
     list-style: none;
     background-color: #dddfd4;
     overflow-y: scroll;
