@@ -1,3 +1,6 @@
+.search-form {
+    display: flex;
+}
 #search-field {
     margin-right: 10px;
     padding-left: 10px;
@@ -12,4 +15,8 @@
     border-radius: 10px;
     background-color: #3fb0ac;
     border: none;
+    background-image: url(https://www.freeiconspng.com/uploads/search-icon-png-1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }

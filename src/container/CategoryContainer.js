@@ -1,6 +1,6 @@
 import React from 'react'
 import RecipeCard from '../component/RecipeCard'
-import './CategoryContainer.css'
+import './css/CategoryContainer.css'
 
 const CategoryContainer = () => {
     const recipes = [1,2,3,4,5,6,7,8]

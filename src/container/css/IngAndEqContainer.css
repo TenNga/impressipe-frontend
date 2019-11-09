@@ -1,0 +1,33 @@
+.sideBar{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    /* background-color: grey; */
+    height: 80vh;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.ingredientList, .equipmentList {
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 7px;
+    
+}
+.ingredientList h4, .equipmentList h4{
+    height: 10%;
+    padding: 0px;
+    
+}
+.ingredientList ul, .equipmentList ul{
+    height: 90%;
+    padding: 10px;
+    border-radius: 7px;
+    list-style: none;
+    background-color: #dddfd4;
+    overflow-y: scroll;
+}
+
+.ingredientList li, .equipmentList li{
+    margin-bottom: 5px;
+}

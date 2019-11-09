@@ -9,6 +9,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './container/NavBar'
 import MainContainer from './container/MainContainer'
+import RecipeShowContainer from './container/RecipeShowContainer'
 import RecipeView from './container/RecipeView'
 import FourOhFour from './container/FourOhFour';
 
@@ -25,7 +26,8 @@ function App() {
           </Route>
 
           <Route exact path="/">
-            <MainContainer />
+            {/* <MainContainer /> */}
+            <RecipeShowContainer />
           </Route>
 
           <Route >
