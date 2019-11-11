@@ -4,7 +4,6 @@ import './css/SingleCarousel.css';
 import {Link} from 'react-router-dom'
 
 const SingleCarousel = (props) => {
-    console.log("Props Carousel, ", props.recipe)
     if(props.recipe.recipe)
         return(
             
