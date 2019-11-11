@@ -1,14 +1,14 @@
 import React from 'react'
 import './css/RecipeCard.css'
 
-const RecipeCard = () => {
+const RecipeCard = (props) => {
     return(
         <div className="recipe-card">
             <div className="image">
-                <img src="https://cdn.riseofthevegan.com/img3/d7f366b12eab.png" />
+                <img src={props.recipe.image_url} />
             </div>
             <div className="title">
-                <h3>Title</h3>
+                <h3>{props.recipe.name}</h3>
             </div>
         </div>
     )

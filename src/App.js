@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,30 +14,46 @@ import RecipeView from './container/RecipeView'
 import FourOhFour from './container/FourOhFour';
 
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <NavBar />
+class App extends Component{
 
-        <Switch>
-          <Route path="/recipes/:id">
-            <RecipeView />
-          </Route>
+  URL="http://localhost:3000/api/v1/recipes"
 
-          <Route exact path="/">
-            {/* <MainContainer /> */}
-            <RecipeShowContainer />
-          </Route>
+  state = {
+    recipes: [],
+    selectedRecipe: {}
+  }
+  
+  componentDidMount(){
+    fetch(this.URL)
+    .then(resp => resp.json())
+    .then((recipes)=> this.setState({recipes: recipes.slice(54)}))
+  }
 
-          <Route >
-            <FourOhFour />
-          </Route>
+  render(){
+    console.log("Recipes in State: ",this.state.recipes)
+    return (
+      <Router>
+        <div className="App">
+          <NavBar />
 
-        </Switch>
-      </div>
-    </Router>
-  );
+          <Switch>
+            <Route path="/recipes/:id">
+              <RecipeShowContainer />
+            </Route>
+
+            <Route exact path="/">
+              <MainContainer recipes={this.state.recipes}/>
+            </Route>
+
+            <Route >
+              <FourOhFour />
+            </Route>
+
+          </Switch>
+        </div>
+      </Router>
+    );
+  }//render
 }
 
 export default App;
