@@ -29,11 +29,10 @@ class App extends Component{
         
 
   render(){
-    console.log("Recipes in State: ",this.state.recipes)
     return (
       <Router>
         <div className="App">
-          <NavBar />
+          <NavBar recipes={this.state.recipes}/>
 
           <Switch>
 

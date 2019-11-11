@@ -23,7 +23,6 @@ const MainContainer = (props) => {
 
     const carouselRecipes = [twentyMinRecipe, partyTime, ingFiveOnly]
     const categories = [veg,vegan,diary_free,gluten_free,keto]
-    console.log(categories)
 
     const recipeShowObj = (routerProps) => {
         if(props.recipes.length){
