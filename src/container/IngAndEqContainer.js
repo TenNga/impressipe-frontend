@@ -18,7 +18,7 @@ const IngAndEqContainer = (props) => {
                     </ul>
             </div>
             <div className="equipmentList">
-                <h4>Equipments</h4>
+                <h4>Equipment</h4>
                 <ul>
                     {renderEquipment()}
                 </ul>
