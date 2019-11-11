@@ -7,15 +7,21 @@ import './css/RecipeShowContainer.css'
 
 class RecipeShowContainer extends Component{
     state = {
-        selectedRecipe: this.props.recipe? this.props.recipe : ""
+        selectedRecipe: this.props.recipe? this.props.recipe : "",
+        stepNum: ""
+    }
+
+    handleSelectedStep = (stepNum) => {
+        this.setState({stepNum})
     }
 
     render(){
+        // console.log("Step Number: ", this.state.stepNum)
         return(
             <div className="recipe-detail-container">
-                <IngAndEqContainer />
-                <RecipeDetail recipe={this.state.selectedRecipe}/>
-                <StepList steps={this.state.selectedRecipe.steps}/>
+                <IngAndEqContainer ingredients = {this.state.selectedRecipe.ingredients} equipments ={this.state.selectedRecipe.equipment}/>
+                <RecipeDetail stepNum = {this.state.stepNum} recipe={this.state.selectedRecipe}/>
+                <StepList handleSelectedStep={this.handleSelectedStep} steps={this.state.selectedRecipe.steps}/>
             </div>
         )
     }
