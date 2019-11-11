@@ -5,7 +5,7 @@ class NavBar extends Component {
     render(){
         return(
             <div className="nav-bar">
-                <img src='impressipe.png' />
+                <img src='/impressipe.png' />
                 <SearchBar />
             </div>
         )
