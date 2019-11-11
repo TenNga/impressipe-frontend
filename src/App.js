@@ -3,14 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Redirect
 } from "react-router-dom"
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './container/NavBar'
 import MainContainer from './container/MainContainer'
-import RecipeShowContainer from './container/RecipeShowContainer'
-import RecipeView from './container/RecipeView'
 import FourOhFour from './container/FourOhFour';
 
 
@@ -28,6 +26,7 @@ class App extends Component{
     .then(resp => resp.json())
     .then((recipes)=> this.setState({recipes: recipes.slice(54)}))
   }
+        
 
   render(){
     console.log("Recipes in State: ",this.state.recipes)
@@ -37,13 +36,16 @@ class App extends Component{
           <NavBar />
 
           <Switch>
-            <Route path="/recipes/:id">
-              <RecipeShowContainer />
-            </Route>
 
-            <Route exact path="/">
-              <MainContainer recipes={this.state.recipes}/>
-            </Route>
+          <Route path="/recipes">
+            <MainContainer recipes= {this.state.recipes} />
+ 
+          </Route>
+
+          <Route exact path="/">
+            <Redirect to="/recipes"/>
+ 
+          </Route>
 
             <Route >
               <FourOhFour />

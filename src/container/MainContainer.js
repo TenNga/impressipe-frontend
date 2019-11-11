@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import {
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom"
 import CarouselContainer from "./CarouselContainer"
 import MainRecipeContainer from './MainRecipeContainer';
+import RecipeShowContainer from './RecipeShowContainer'
 
 const MainContainer = (props) => {
 
@@ -13,10 +19,18 @@ const MainContainer = (props) => {
     const categories = [veg,vegan,diary_free,gluten_free,keto]
     console.log(categories)
     return(
-        <div className="main-container" >
-            <CarouselContainer />
-            <MainRecipeContainer categories = {categories} />
-        </div>
+        <Switch>
+            <Route path="/recipes/:id">
+                <RecipeShowContainer />
+            </Route>
+
+            <Route exact path="/recipes">
+                <div className="main-container" >
+                    <CarouselContainer />
+                    <MainRecipeContainer categories={categories} />
+                </div>
+            </Route>
+        </Switch>
     )
 }
 export default MainContainer;
