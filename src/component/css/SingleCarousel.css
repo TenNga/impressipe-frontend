@@ -5,4 +5,10 @@
     background-color: rgba(104, 104, 104, 0.584);
     border-radius: 7px;
 }
-
+button{
+    border:none;
+    width: 10vw;
+    height: 6vh;
+    font-weight: bolder;
+    color: #3fb0ac;
+}

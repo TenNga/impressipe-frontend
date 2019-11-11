@@ -2,12 +2,16 @@ import React from 'react';
 import './css/IngAndEqContainer.css'
 
 const IngAndEqContainer = (props) => {
-    const renderIng = () => {
-        return props.ingredients.map(ing => <li>{ing.name}</li>)
+   
+    const renderIng = () => { 
+        let currentIngredient = props.AllIngredients;
+        if(props.currentStepIngredient)
+            currentIngredient = props.currentStepIngredient.map(ing => ing.name)
+        return props.AllIngredients.map(ing => <li className={currentIngredient.includes(ing.name)? "currentStepStyle" : ""}>{ing.name}</li>)
     }
 
     const renderEquipment = () => {
-        return props.equipments.map(equipment => <li>{equipment.name}</li>)
+        return props.equipments.map(equipment => <li >{equipment.name}</li>)
     }
     return(
         <div className="sideBar">

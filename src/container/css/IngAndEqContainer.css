@@ -37,3 +37,11 @@
 .ingredientList li, .equipmentList li{
     margin-bottom: 5px;
 }
+
+.currentStepStyle {
+    border-radius: 6px;
+    font-size: 2vw;
+    margin-bottom: 5px;
+    color: rgb(242, 14, 14);
+   
+}

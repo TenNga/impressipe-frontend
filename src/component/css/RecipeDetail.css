@@ -3,7 +3,10 @@
     border-radius: 7px;
 }
 .step {
-    padding: 0vw 7vw;
+    border-radius: 7px;
+    height: 90%;
+    background-color: rgba(4, 93, 125, 0.482);
+    padding: 1vw 7vw;
     text-align: left;
 }
 .single-recipe-detail-container h1{
@@ -18,4 +21,8 @@
     width: 25vw;
     height: 30vh;
     border-radius: 4px;
+}
+
+.step p {
+    font-size: 1.5vw;
 }

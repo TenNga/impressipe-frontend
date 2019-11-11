@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import SearchBar from '../component/SearchBar'
 import SearchPrediction from './SearchPredection'
+import { Link } from 'react-router-dom'
 import './css/NavBar.css'
 
 class NavBar extends Component {
@@ -28,7 +29,7 @@ class NavBar extends Component {
         return(
             <Fragment>
                 <div className="nav-bar">
-                    <img src='/impressipe.png' />
+                    <Link to={"/recipes"}><img src='/impressipe.png' /></Link>
                     <SearchBar searchValue={this.state.searchValue} handleChange={this.updateSearchValue}/>
                 </div>
 
