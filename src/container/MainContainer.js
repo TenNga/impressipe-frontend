@@ -23,10 +23,19 @@ const MainContainer = (props) => {
     const carouselRecipes = [twentyMinRecipe, partyTime, ingFiveOnly]
     const categories = [veg,vegan,diary_free,gluten_free,keto]
     console.log(categories)
+
+    const recipeShowObj = (routerProps) => {
+        let recipe = props.recipes.find(recipe=>recipe.id === +(routerProps.match.params.id))
+        console.log('Recipe Show Obj:')
+        console.log("recipe: ", recipe)
+        console.log("routerProps: ", routerProps)
+        return <RecipeShowContainer recipe={recipe}/>
+    }
+
     return(
         <Switch>
-            <Route path="/recipes/:id">
-                <RecipeShowContainer />
+            <Route path="/recipes/:id" render={recipeShowObj}>
+                
             </Route>
 
             <Route exact path="/recipes">

@@ -5,11 +5,11 @@ import StepList from '../component/StepList'
 import './css/RecipeShowContainer.css'
 
 
-const RecipeShowContainer = () => {
+const RecipeShowContainer = (props) => {
     return(
         <div className="recipe-detail-container">
             <IngAndEqContainer />
-            <RecipeDetail />
+            <RecipeDetail recipe={props.recipe}/>
             <StepList />
         </div>
     )

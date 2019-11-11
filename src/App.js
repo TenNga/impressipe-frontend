@@ -24,7 +24,7 @@ class App extends Component{
   componentDidMount(){
     fetch(this.URL)
     .then(resp => resp.json())
-    .then((recipes)=> this.setState({recipes: recipes.slice(54)}))
+    .then((recipes)=> this.setState({recipes: recipes}))
   }
         
 
