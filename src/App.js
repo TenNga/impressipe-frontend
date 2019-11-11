@@ -22,12 +22,12 @@ function App() {
 
         <Switch>
           <Route path="/recipes/:id">
-            <RecipeView />
+          <RecipeShowContainer />
           </Route>
 
           <Route exact path="/">
-            {/* <MainContainer /> */}
-            <RecipeShowContainer />
+            <MainContainer />
+            
           </Route>
 
           <Route >
