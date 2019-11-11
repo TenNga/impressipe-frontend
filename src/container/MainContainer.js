@@ -6,7 +6,8 @@ import {
   } from "react-router-dom"
 import CarouselContainer from "./CarouselContainer"
 import MainRecipeContainer from './MainRecipeContainer';
-import RecipeShowContainer from './RecipeShowContainer'
+import RecipeShowContainer from './RecipeShowContainer';
+import FourOhFour from './FourOhFour'
 
 const MainContainer = (props) => {
 
@@ -25,18 +26,16 @@ const MainContainer = (props) => {
     console.log(categories)
 
     const recipeShowObj = (routerProps) => {
+        if(props.recipes.length){
         let recipe = props.recipes.find(recipe=>recipe.id === +(routerProps.match.params.id))
-        console.log('Recipe Show Obj:')
-        console.log("recipe: ", recipe)
-        console.log("routerProps: ", routerProps)
-        return <RecipeShowContainer recipe={recipe}/>
+        if(recipe) return <RecipeShowContainer recipe={recipe}/>
+        else return <FourOhFour/>
+        } else return <h1>Loading...</h1>
     }
 
     return(
         <Switch>
-            <Route path="/recipes/:id" render={recipeShowObj}>
-                
-            </Route>
+            <Route path="/recipes/:id" render={recipeShowObj}/>
 
             <Route exact path="/recipes">
                 <div className="main-container" >

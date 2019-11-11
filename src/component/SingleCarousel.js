@@ -1,11 +1,13 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
 import './css/SingleCarousel.css';
+import {Link} from 'react-router-dom'
 
 const SingleCarousel = (props) => {
     console.log("Props Carousel, ", props.recipe)
     if(props.recipe.recipe)
         return(
+            
             <div className="single-carousel">
                 <img
                 className="d-block w-100"
@@ -15,7 +17,9 @@ const SingleCarousel = (props) => {
                 <Carousel.Caption className="description">
                 <h3>{props.recipe.header}</h3>
                 <p>{props.recipe.recipe.name}</p>
-                <button>Details</button>
+                <Link to={"/recipes/" + props.recipe.recipe.id}>
+                    <button>Details</button>
+                </Link>
                 </Carousel.Caption>
             </div>
         )
