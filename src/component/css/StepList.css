@@ -18,6 +18,10 @@
     box-shadow: 2px 3px rgba(255, 255, 255, 0.803);
 }
 
+.step-list li:hover{
+    cursor: pointer;
+}
+
 .step-list .current-step {
     font-size: 1.7vw;
     color: white;
