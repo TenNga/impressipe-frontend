@@ -1,4 +1,6 @@
 .step-list{
+    height: 80vh;
+    overflow-y: scroll;
     padding: 20px 0px;
 }
 .step-list ul {

@@ -26,10 +26,11 @@ class NavBar extends Component {
     }
 
     render(){
+
         return(
             <Fragment>
                 <div className="nav-bar">
-                    <Link to={"/recipes"}><img src='/impressipe.png' /></Link>
+                    <Link to={"/recipes"}><img src="/impressipeReal.png"/></Link>
                     <SearchBar searchValue={this.state.searchValue} handleChange={this.updateSearchValue}/>
                 </div>
 
