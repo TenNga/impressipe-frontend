@@ -5,7 +5,11 @@ import nToW from 'number-to-words';
 class StepList extends Component {
 
     state = {
-        currentStep : ""
+        currentStep : 1
+    }
+
+    capitalize = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1)
     }
 
     currentStepStyle = (stepNum) => {
@@ -20,7 +24,7 @@ class StepList extends Component {
         onClick={()=>this.currentStepStyle(step.number)}
         className={this.state.currentStep===step.number? "current-step" : ""}
         >
-            {"Step "+nToW.toWords(parseInt(step.number)) }
+            {"Step "+ this.capitalize(nToW.toWords(parseInt(step.number))) }
         </li>
     })
     }

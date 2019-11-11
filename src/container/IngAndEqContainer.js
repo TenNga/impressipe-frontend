@@ -7,7 +7,9 @@ const IngAndEqContainer = (props) => {
         let currentIngredient = props.AllIngredients;
         if(props.currentStepIngredient)
             currentIngredient = props.currentStepIngredient.map(ing => ing.name)
-        return props.AllIngredients.map(ing => <li className={currentIngredient.includes(ing.name)? "currentStepStyle" : ""}>{ing.name}</li>)
+        return props.AllIngredients.map(ing => <li className={currentIngredient.includes(ing.name)? "currentStepStyle" : ""}><span>{ing.name}</span><span>{ing.quantity} {ing.unit}</span></li>)
+    // const renderIng = () => {
+    //     return props.ingredients.map(ing => <li><span>{ing.name}</span><span>{ing.quantity} {ing.unit}</span></li>)
     }
 
     const renderEquipment = () => {
@@ -22,7 +24,7 @@ const IngAndEqContainer = (props) => {
                     </ul>
             </div>
             <div className="equipmentList">
-                <h4>Equipments</h4>
+                <h4>Equipment</h4>
                 <ul>
                     {renderEquipment()}
                 </ul>

@@ -8,7 +8,7 @@ import './css/RecipeShowContainer.css'
 class RecipeShowContainer extends Component{
     state = {
         selectedRecipe: this.props.recipe? this.props.recipe : "",
-        stepNum: "",
+        stepNum: 1,
         currentStepIng: []
     }
 

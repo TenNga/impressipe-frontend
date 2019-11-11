@@ -8,7 +8,7 @@ const CarouselContainer = (props) => {
     let CarouselRecipes= props.carouselRecipes;
     const renderCarousel = () => CarouselRecipes.map(recipe => <Carousel.Item><SingleCarousel key={recipe.name} recipe = {recipe} /></Carousel.Item>)
     return (
-        <Carousel>
+        <Carousel interval={5000}>
             {renderCarousel()}
         </Carousel>
     )
