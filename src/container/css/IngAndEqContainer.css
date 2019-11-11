@@ -34,6 +34,14 @@
     overflow-y: scroll;
 }
 
-.ingredientList li, .equipmentList li{
+.ingredientList li {
+    display:flex;
+    justify-content: space-between;
+    margin-left: 9px;
+    margin-right: 9px;
     margin-bottom: 5px;
+}
+
+.equipmentList li {
+    margin-bottom: 5px
 }

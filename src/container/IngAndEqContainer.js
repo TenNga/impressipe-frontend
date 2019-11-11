@@ -3,7 +3,7 @@ import './css/IngAndEqContainer.css'
 
 const IngAndEqContainer = (props) => {
     const renderIng = () => {
-        return props.ingredients.map(ing => <li>{ing.name}</li>)
+        return props.ingredients.map(ing => <li><span>{ing.name}</span><span>{ing.quantity} {ing.unit}</span></li>)
     }
 
     const renderEquipment = () => {
