@@ -1,0 +1,30 @@
+.step-list{
+    padding: 20px 0px;
+}
+.step-list ul {
+    list-style: none;
+    padding: 0px;
+    text-align: left;
+}
+.step-list li{
+    font-size: 1.7vw;
+    color: white;
+    background-color: #FF6F61;
+    background-size: contain;
+    border-radius: 7px 0px 0px 7px;
+    padding: 4px 5px;
+    margin-bottom: 15px;
+    margin-left: 3.5vw;
+}
+
+.step-list .current-step {
+    font-size: 1.7vw;
+    color: white;
+    text-align: left;
+    background-color: rgb(22, 153, 176);
+    background-size: contain;
+    border-radius: 7px 0px 0px 7px;
+    padding: 4px 7px;
+    margin-bottom: 15px;
+    margin-left: 2vw;
+}
