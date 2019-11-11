@@ -1,11 +1,16 @@
 import React from 'react';
 import './css/StepList.css';
 
-const StepList = () => {
+const StepList = (props) => {
+    const renderStepList = () => {
+        if(props.steps)
+            return props.steps.map(step => <li>{"Step " + Object.keys(step) }</li>)
+    }
     return(
         <div className="step-list">
             <ul >
-                <li className="current-step">Step One</li>
+                {renderStepList()}
+                {/* <li className="current-step">Step One</li>
                 <li>Step Two</li>
                 <li>Step Three</li>
                 <li>Step Four</li>
@@ -14,7 +19,7 @@ const StepList = () => {
                 <li>Step Seve</li>
                 <li>Step Eight</li>
                 <li>Step Nine</li>
-                <li>Step Ten</li>
+                <li>Step Ten</li> */}
             </ul>
         </div>
     )
