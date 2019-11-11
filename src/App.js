@@ -3,14 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Redirect
 } from "react-router-dom"
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './container/NavBar'
 import MainContainer from './container/MainContainer'
-import RecipeShowContainer from './container/RecipeShowContainer'
-import RecipeView from './container/RecipeView'
 import FourOhFour from './container/FourOhFour';
 
 
@@ -21,13 +19,15 @@ function App() {
         <NavBar />
 
         <Switch>
-          <Route path="/recipes/:id">
-          <RecipeShowContainer />
+
+          <Route path="/recipes">
+            <MainContainer />
+ 
           </Route>
 
           <Route exact path="/">
-            <MainContainer />
-            
+            <Redirect to="/recipes"/>
+ 
           </Route>
 
           <Route >
