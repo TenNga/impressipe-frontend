@@ -23,6 +23,14 @@
     border-radius: 4px;
 }
 
-.step p {
+.step-text {
     font-size: 1.5vw;
+}
+
+.recipe-attributes {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 0.3vh;
 }
