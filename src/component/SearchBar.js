@@ -2,12 +2,18 @@ import React, {Component} from 'react';
 import './css/SearchBar.css'
 
 class SearchBar extends Component {
-    state = {  }
+    state = { 
+        searchValue: ""
+     }
+     handleSearchChange = (e) => {
+            this.setState({searchValue: e.target.value})
+        }
+        
     render() { 
         return ( 
             <div>
                 <form className="search-form">
-                    <input id="search-field" type="text" placeholder="Search Recipe" />
+                    <input onChange={this.handleSearchChange} value={this.state.searchValue} id="search-field" type="text" placeholder="Search Recipe" />
                     <input id="submit-btn" type="image" value = "submit" src="https://www.freeiconspng.com/uploads/search-icon-png-1.png"/>
                 </form>
             </div> 

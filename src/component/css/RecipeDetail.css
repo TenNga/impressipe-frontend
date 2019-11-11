@@ -1,0 +1,21 @@
+.single-recipe-detail-container{
+    margin: 20px 0px;
+    border-radius: 7px;
+}
+.step {
+    padding: 0vw 7vw;
+    text-align: left;
+}
+.single-recipe-detail-container h1{
+    text-decoration: underline overline;
+}
+.step h3 {
+    font-size: 2vw;
+    text-shadow: 1px 0.5px rgba(255, 255, 255, 0.632);
+}
+.step img {
+    margin: 5vh 0vh;
+    width: 25vw;
+    height: 30vh;
+    border-radius: 4px;
+}
