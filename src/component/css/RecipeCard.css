@@ -1,6 +1,6 @@
 .recipe-card{
     margin: 5px;
-    padding: 2px;
+    padding: 0px;
     border-radius: 6px;
     min-width: 15vw;
     background-color: rgba(216, 117, 31, 0.708);
@@ -10,8 +10,11 @@
 .recipe-card h3 {
     font-size: 1.2vw;
 }
-
+.recipe-card .image {
+    width: 100%;
+}
 .recipe-card img{
-    width: 13vw;
+    border-radius: 6px;
+    width: 14.7vw;
     object-fit: cover;
 }

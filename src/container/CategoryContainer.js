@@ -6,7 +6,7 @@ const CategoryContainer = (props) => {
     const recipes = props.category
 
     const renderRecipeCard = () => {
-        return recipes.recipes.map(recipe => <RecipeCard recipe = {recipe} />)
+        return recipes.recipes.map(recipe => <RecipeCard key = {recipe.id} recipe = {recipe} />)
     }
     return (
         <div className="category-container">

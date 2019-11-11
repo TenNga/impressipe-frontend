@@ -16,6 +16,11 @@ const MainContainer = (props) => {
     const gluten_free = {categoryName: "Gluten Free", recipes: props.recipes.filter(recipe => recipe.gluten_free === true) }
     const keto = {categoryName: "Keto", recipes: props.recipes.filter(recipe => recipe.keto === true) }
      
+    const twentyMinRecipe = {header: "Ready In 20minute", recipe: props.recipes.find(recipe => parseInt(recipe.time_in_minute) <= 20)};
+    const partyTime = {header: "Party Time", recipe: props.recipes.find(recipe => parseInt(recipe.serves) >= 12)};
+    const ingFiveOnly = {header: "Only 5 Ingredient", recipe: props.recipes.find(recipe => parseInt(recipe.ingredients.length) === 5)};
+
+    const carouselRecipes = [twentyMinRecipe, partyTime, ingFiveOnly]
     const categories = [veg,vegan,diary_free,gluten_free,keto]
     console.log(categories)
     return(
@@ -26,7 +31,7 @@ const MainContainer = (props) => {
 
             <Route exact path="/recipes">
                 <div className="main-container" >
-                    <CarouselContainer />
+                    <CarouselContainer carouselRecipes = {carouselRecipes} />
                     <MainRecipeContainer categories={categories} />
                 </div>
             </Route>

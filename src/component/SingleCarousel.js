@@ -2,20 +2,29 @@ import React from 'react';
 import {Carousel} from 'react-bootstrap';
 import './css/SingleCarousel.css';
 
-const SingleCarousel = () => {
-    return(
-        <div className="single-carousel">
-            <img
-            className="d-block w-100"
-            src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-            alt="First slide"
-            />
-            <Carousel.Caption className="description">
-            <h3>10 Minute Recipe</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <button>Details</button>
-            </Carousel.Caption>
-        </div>
-    )
+const SingleCarousel = (props) => {
+    console.log("Props Carousel, ", props.recipe)
+    if(props.recipe.recipe)
+        return(
+            <div className="single-carousel">
+                <img
+                className="d-block w-100"
+                src={props.recipe.recipe.image_url}
+                alt="First slide"
+                />
+                <Carousel.Caption className="description">
+                <h3>{props.recipe.header}</h3>
+                <p>{props.recipe.recipe.name}</p>
+                <button>Details</button>
+                </Carousel.Caption>
+            </div>
+        )
+    else 
+        return (
+            <div>
+                <h4>Loading...</h4>
+                <img src="/loading.gif" />
+            </div>
+        )
 }
 export default SingleCarousel

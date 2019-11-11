@@ -3,10 +3,10 @@ import './css/CarouselContainer.css'
 import {Carousel} from 'react-bootstrap';
 import SingleCarousel from '../component/SingleCarousel'
 
-    let data= [1,2,3]
-    const renderCarousel = () => data.map(d => <Carousel.Item><SingleCarousel /></Carousel.Item>)
-    
-    const CarouselContainer = () => {
+
+const CarouselContainer = (props) => {
+    let CarouselRecipes= props.carouselRecipes;
+    const renderCarousel = () => CarouselRecipes.map(recipe => <Carousel.Item><SingleCarousel key={recipe.name} recipe = {recipe} /></Carousel.Item>)
     return (
         <Carousel>
             {renderCarousel()}
