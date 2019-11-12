@@ -20,6 +20,7 @@ class App extends Component{
     selectedRecipe: {}
   }
   
+  
   componentDidMount(){
     fetch(this.URL)
     .then(resp => resp.json())
@@ -30,7 +31,11 @@ class App extends Component{
   render(){
     return (
       <Router>
+        <div class="lock">
+            <img src="https://image.flaticon.com/icons/svg/35/35432.svg" alt="roate" />
+          </div>
         <div className="App">
+          
           <NavBar recipes={this.state.recipes}/>
 
           <Switch>
