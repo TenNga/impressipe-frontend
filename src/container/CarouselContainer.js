@@ -6,7 +6,7 @@ import SingleCarousel from '../component/SingleCarousel'
 
 const CarouselContainer = (props) => {
     let CarouselRecipes= props.carouselRecipes;
-    const renderCarousel = () => CarouselRecipes.map(recipe => <Carousel.Item><SingleCarousel key={recipe.name} recipe = {recipe} /></Carousel.Item>)
+    const renderCarousel = () => CarouselRecipes.map(recipe => <Carousel.Item ><SingleCarousel key={recipe.id} recipe = {recipe} /></Carousel.Item>)
     return (
         <Carousel interval={5000}>
             {renderCarousel()}

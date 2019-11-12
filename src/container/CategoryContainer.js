@@ -7,7 +7,7 @@ const CategoryContainer = (props) => {
     const recipes = props.category
 
     const renderRecipeCard = () => {
-        return recipes.recipes.map(recipe => <Link to={"/recipes/" + recipe.id}><RecipeCard key = {recipe.id} recipe = {recipe} /></Link>)
+        return recipes.recipes.map(recipe => <Link to={"/recipes/" + recipe.id} key={recipe.name}><RecipeCard key = {recipe.id} recipe = {recipe} /></Link>)
     }
     return (
         <div className="category-container">

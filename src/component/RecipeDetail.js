@@ -28,7 +28,7 @@ const RecipeDetail = (props) => {
                     {getAttributes().length? <span >{getAttributes().join(" | ")}</span> : null}
                     </p>
                     <h3>Step {props.stepNum}</h3>
-                    <img src={props.recipe.image_url} alt="stepOne" />
+                    <img src={props.recipe.image_url} alt={props.stepNum} />
                     <p className="step-text">{getStepText(props.stepNum)}</p>
                 </div>
             </div>

@@ -21,6 +21,7 @@ class StepList extends Component {
         if(this.props.steps)
     return this.props.steps.map((step) => {
     return <li 
+        key={step.id}
         onClick={()=>this.currentStepStyle(step.number)}
         className={this.state.currentStep===step.number? "current-step" : ""}
         >

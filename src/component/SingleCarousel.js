@@ -26,7 +26,7 @@ const SingleCarousel = (props) => {
         return (
             <div>
                 <h4>Loading...</h4>
-                <img src="/loading.gif" />
+                <img src="/loading.gif" alt="Loading..."/>
             </div>
         )
 }

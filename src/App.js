@@ -5,7 +5,6 @@ import {
   Route,
   Redirect
 } from "react-router-dom"
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './container/NavBar'
 import MainContainer from './container/MainContainer'
