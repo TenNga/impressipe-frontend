@@ -1,4 +1,14 @@
 .App {
   text-align: center;
   color: #3fb0ac;
+  overflow-x: hidden;
+}
+@media (orientation: portrait) {
+  .app {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
 }
