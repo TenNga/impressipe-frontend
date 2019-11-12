@@ -4,7 +4,7 @@ import './css/SingleCarousel.css';
 import {Link} from 'react-router-dom'
 
 const SingleCarousel = (props) => {
-    if(props){
+    if(props.header){
         return(
             
             <div className="single-carousel">
