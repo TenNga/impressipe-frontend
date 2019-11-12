@@ -2,13 +2,8 @@
     margin: 5px;
     padding: 0px;
     border-radius: 6px;
-    min-width: 15vw;
-<<<<<<< HEAD
-    max-width: 15vw;
-    height: 35vh;
-=======
+    width: 15vw;
     height: 25vh;
->>>>>>> d787396827d023119d087865fea0927d76dfdc85
     background-color: rgba(218, 184, 153, 0.708);
     text-align: center;
 }
@@ -37,4 +32,8 @@
 a{
     text-decoration: none !important;
     color: white !important;
+}
+
+.card-tooltip{
+    max-width:10vw;
 }
