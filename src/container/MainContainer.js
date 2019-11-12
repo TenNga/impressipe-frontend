@@ -7,6 +7,7 @@ import CarouselContainer from "./CarouselContainer"
 import MainRecipeContainer from './MainRecipeContainer';
 import RecipeShowContainer from './RecipeShowContainer';
 import FourOhFour from './FourOhFour'
+import './css/MainContainer.css'
 
 const MainContainer = (props) => {
 
@@ -52,8 +53,8 @@ const MainContainer = (props) => {
             </Switch>
         : 
         <div>
-            <h4>Loading...</h4>
-            <img src="/loading.gif" alt="Loading..."/>
+            <h1>Loading...</h1>
+            <img src="/impressipe.gif" alt="Loading..."/>
         </div>
                     
     )

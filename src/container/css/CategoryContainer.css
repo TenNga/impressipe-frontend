@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    
+    height: 32.69vh;
     
 }
 .category-container{

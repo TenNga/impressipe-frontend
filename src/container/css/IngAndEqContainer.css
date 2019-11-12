@@ -50,5 +50,7 @@
     color: rgb(242, 14, 14);
 }
 .equipmentList li {
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
 }

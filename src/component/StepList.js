@@ -19,15 +19,15 @@ class StepList extends Component {
 
     renderStepList = () => {
         if(this.props.steps)
-    return this.props.steps.map((step) => {
-    return <li 
-        key={step.id}
-        onClick={()=>this.currentStepStyle(step.number)}
-        className={this.state.currentStep===step.number? "current-step" : ""}
-        >
-            {"Step "+ this.capitalize(nToW.toWords(parseInt(step.number))) }
-        </li>
-    })
+            return this.props.steps.map((step) => {
+            return <li 
+                key={step.id}
+                onClick={()=>this.currentStepStyle(step.number)}
+                className={this.state.currentStep===step.number? "current-step" : ""}
+                >
+                    {"Step "+ this.capitalize(nToW.toWords(parseInt(step.number))) }
+                </li>
+            })
     }
     render(){
         return(

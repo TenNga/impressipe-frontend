@@ -32,8 +32,10 @@ const RecipeDetail = (props) => {
                     </ReactTooltip>
                     </p>
                     <h3>Step {props.stepNum}</h3>
-                    <img src={props.recipe.image_url} alt={props.stepNum} />
-                    <p className="step-text">{getStepText(props.stepNum)}</p>
+                    <div className="img-desc">
+                       <img src={props.recipe.image_url} alt={props.stepNum} />
+                        <p className="step-text">{getStepText(props.stepNum)}</p> 
+                    </div>
                 </div>
             </div>
         :
