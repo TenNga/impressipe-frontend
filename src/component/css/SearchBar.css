@@ -20,3 +20,14 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 600px) {
+    .search-form {
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+    }
+    #search-field{
+        width: 60vw;
+    }
+  }

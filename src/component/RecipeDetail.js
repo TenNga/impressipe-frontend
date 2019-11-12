@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/RecipeDetail.css';
+import ReactTooltip from 'react-tooltip'
 
 const RecipeDetail = (props) => {
     const getStepText = (num) => {
@@ -25,7 +26,10 @@ const RecipeDetail = (props) => {
                 <div className="step">
                     <p className="recipe-attributes">
                     <span>{"Serves: "+props.recipe.serves + " | Time to Cook: " + props.recipe.time_in_minute + " minutes"}</span>
-                    {getAttributes().length? <span >{getAttributes().join(" | ")}</span> : null}
+                    {getAttributes().length? <span data-tip data-for='categories'>{getAttributes().join(" | ")}</span> : null}
+                    <ReactTooltip id='categories' type='success' effect='solid'>
+                        <span>Vegetarian | Vegan | Dairy Free | Gluten Free</span>
+                    </ReactTooltip>
                     </p>
                     <h3>Step {props.stepNum}</h3>
                     <img src={props.recipe.image_url} alt="stepOne" />

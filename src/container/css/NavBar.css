@@ -1,13 +1,30 @@
 .nav-bar {
     display: flex;
     justify-content: flex-start;
+    width: 100vw;
+    height: 13vh;
     column-gap: 50px;
     align-items: center;
     padding: 0px 20px;
     margin-bottom: 10px;
     box-shadow: 0 4px 10px -2px #abacac;
     background-color: #dddfd4;
+    
 }
 .nav-bar img {
     width: 200px;
 }
+
+@media screen and (max-width: 600px) {
+    .nav-bar {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      width: 100vw;
+      height: 12vh;
+    }
+
+    .nav-bar img {
+        margin: auto;
+        width: 80px;
+    }
+  }
