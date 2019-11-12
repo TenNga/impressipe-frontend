@@ -1,4 +1,32 @@
 .App {
   text-align: center;
   color: #3fb0ac;
+  overflow-x: hidden;
 }
+.lock {
+  display: none;
+}
+@media (orientation: portrait) {
+  .App {
+    display: none;
+  }
+  .lock {
+    display: block;
+    color: white;
+  }
+  .lock img {
+    width: 100vw;
+    padding: 20px;
+  }
+}
+@media (orientation: landscape) {
+  .App {
+    display: block;
+    height: 100vh;
+  }
+  .lock {
+    display: none;
+  }
+}
+
+

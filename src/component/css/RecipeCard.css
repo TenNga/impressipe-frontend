@@ -2,14 +2,14 @@
     margin: 5px;
     padding: 0px;
     border-radius: 6px;
-    width: 15vw;
-    height: 25vh;
+    width: 13.5rem;
+    height: 12rem;
     background-color: rgba(218, 184, 153, 0.708);
     text-align: center;
 }
 
 .recipe-card h3 {
-    font-size: 1.2vw;
+    font-size: 1.1rem;
 }
 
 .recipe-card .image {
@@ -18,7 +18,7 @@
 
 .recipe-card img{
     border-radius: 6px;
-    width: 14.7vw;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -37,3 +37,14 @@ a{
 .card-tooltip{
     width:15vw;
 }
+
+@media only screen and (max-width: 600px) {
+    .recipe-card {
+      width: 10rem;
+      height: 9rem;
+    }
+
+    .recipe-card h3{
+        font-size: 0.7rem;
+    }
+  }

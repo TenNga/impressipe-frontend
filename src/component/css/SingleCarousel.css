@@ -1,5 +1,5 @@
 .single-carousel {
-    height: 350px;
+    height: 27rem;
 }
 .description{
     background-color: rgba(104, 104, 104, 0.584);
@@ -7,8 +7,22 @@
 }
 button{
     border:none;
-    width: 10vw;
+    width: 10rem;
     height: 6vh;
     font-weight: bolder;
     color: #3fb0ac;
 }
+
+.single-carousel img {
+    width: 90vw;
+    height: 27rem;
+    object-fit: cover;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .single-carousel {
+        height: 20rem;
+    }
+    
+  }
