@@ -7,9 +7,9 @@ const SearchPrediction = (props) => {
     const renderItems = () => {
         const arr = props.recipes.map(recipe=>{
             return (
-            <Link onClick={props.resetSearchValue} to={"/recipes/" + recipe.id}>
+            <Link key={recipe.id} onClick={props.resetSearchValue} to={"/recipes/" + recipe.id}>
                 <li>
-                    <img src={recipe.image_url}/>
+                    <img src={recipe.image_url} alt={recipe.name}/>
                     <h5>{recipe.name}</h5>
                 </li>
             </Link>

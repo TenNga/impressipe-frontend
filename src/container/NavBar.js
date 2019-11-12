@@ -30,7 +30,7 @@ class NavBar extends Component {
         return(
             <Fragment>
                 <div className="nav-bar">
-                    <Link to={"/recipes"}><img src="/impressipeReal.png"/></Link>
+                    <Link to={"/recipes"}><img src="/impressipeReal.png" alt="impressipe"/></Link>
                     <SearchBar searchValue={this.state.searchValue} handleChange={this.updateSearchValue}/>
                 </div>
 

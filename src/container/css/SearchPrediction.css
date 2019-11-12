@@ -2,10 +2,10 @@
 
 .search-prediction {
     list-style: none;
-    max-height: 50%;
-    margin-top: -0.5%;
+    max-height: 46vh;
+    margin-top: -0.8vh;
     padding: 1px;
-    margin-left: 15.2%;
+    margin-left: 15.3vw;
     width: 38vw;
     border-radius: 0px 0px 7px 7px;
     background-color: #dddfd4f1;
@@ -28,9 +28,10 @@
 
 .search-prediction img{
     object-fit: cover;
-    height: 10vh;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
-    padding-left: 1vw;
+  
 }
 
 .search-prediction li{

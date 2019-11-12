@@ -5,8 +5,10 @@ import SingleCarousel from '../component/SingleCarousel'
 
 
 const CarouselContainer = (props) => {
-    let CarouselRecipes= props.carouselRecipes;
-    const renderCarousel = () => CarouselRecipes.map(recipe => <Carousel.Item><SingleCarousel key={recipe.name} recipe = {recipe} /></Carousel.Item>)
+    let carouselRecipes= props.carouselRecipes;
+    const renderCarouselItem = (recipe, header) => {
+   return <Carousel.Item key={recipe.id}><SingleCarousel header={header} key={recipe.id} recipe={recipe} /></Carousel.Item>}
+    const renderCarousel = () => carouselRecipes.map(categoryObj => categoryObj.recipes.length? renderCarouselItem(categoryObj.recipes[Math.floor(Math.random()*categoryObj.recipes.length)], categoryObj.header):null)
     return (
         <Carousel interval={5000}>
             {renderCarousel()}
