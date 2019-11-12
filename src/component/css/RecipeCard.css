@@ -3,8 +3,12 @@
     padding: 0px;
     border-radius: 6px;
     min-width: 15vw;
+<<<<<<< HEAD
     max-width: 15vw;
     height: 35vh;
+=======
+    height: 25vh;
+>>>>>>> d787396827d023119d087865fea0927d76dfdc85
     background-color: rgba(218, 184, 153, 0.708);
     text-align: center;
 }
@@ -22,9 +26,12 @@
     width: 14.7vw;
     object-fit: cover;
 }
+
 .recipe-card:hover{
     transition: .5s;
     transform: scale(1.05);
+    overflow: visible;
+    
 }
 
 a{
