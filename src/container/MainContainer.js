@@ -16,9 +16,9 @@ const MainContainer = (props) => {
     const gluten_free = {categoryName: "Gluten Free", recipes: props.recipes.filter(recipe => recipe.gluten_free === true) }
     const keto = {categoryName: "Keto", recipes: props.recipes.filter(recipe => recipe.keto === true) }
      
-    const twentyMinRecipe = {header: "Ready In 20 Minutes", recipe: props.recipes.find(recipe => parseInt(recipe.time_in_minute) <= 20)};
-    const partyTime = {header: "Cooking for a Group?", recipe: props.recipes.find(recipe => parseInt(recipe.serves) >= 12)};
-    const ingFiveOnly = {header: "Just 5 Ingredients", recipe: props.recipes.find(recipe => parseInt(recipe.ingredients.length) === 5)};
+    const twentyMinRecipe = {header: "Ready In 20 Minutes", recipes: props.recipes.filter(recipe => parseInt(recipe.time_in_minute) <= 20)};
+    const partyTime = {header: "Cooking for a Group?", recipes: props.recipes.filter(recipe => parseInt(recipe.serves) >= 12)};
+    const ingFiveOnly = {header: "Just 5 Ingredients", recipes: props.recipes.filter(recipe => parseInt(recipe.ingredients.length) === 5)};
 
     const carouselRecipes = [twentyMinRecipe, partyTime, ingFiveOnly]
     const categories = [veg,vegan,diary_free,gluten_free,keto]
