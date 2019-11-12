@@ -11,7 +11,7 @@ const CategoryContainer = (props) => {
     }
     return (
         <div className="category-container">
-            <h3>{props.category.categoryName}</h3>
+            <h3 className="category-header">{props.category.categoryName}</h3>
         <div className="card-container">
             
             {renderRecipeCard()}

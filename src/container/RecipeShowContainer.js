@@ -28,7 +28,9 @@ class RecipeShowContainer extends Component{
         return(
             <div className="recipe-detail-container">
                 <IngAndEqContainer currentStepIngredient = {this.getStepIngredient(this.state.stepNum)} AllIngredients = {this.state.selectedRecipe.ingredients} equipments ={this.state.selectedRecipe.equipment}/>
+
                 <RecipeDetail stepNum = {this.state.stepNum} recipe={this.state.selectedRecipe}/>
+                
                 <StepList handleSelectedStep={this.handleSelectedStep} steps={this.state.selectedRecipe.steps}/>
             </div>
         )
