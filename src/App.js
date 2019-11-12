@@ -31,7 +31,7 @@ class App extends Component{
   render(){
     return (
       <Router>
-        <div class="lock">
+        <div className="lock">
             <img src="https://image.flaticon.com/icons/svg/35/35432.svg" alt="roate" />
           </div>
         <div className="App">
@@ -47,7 +47,6 @@ class App extends Component{
 
           <Route exact path="/">
             <Redirect to="/recipes"/>
- 
           </Route>
 
             <Route >

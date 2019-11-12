@@ -48,9 +48,8 @@ const MainContainer = (props) => {
         else return <FourOhFour/>
         } else return <h1>Loading...</h1>
     }
-
+    if(props.recipes.length){
     return(
-        props.recipes.length ?
             <Switch>
                 <Route path="/recipes/:id" render={recipeShowObj}/>
 
@@ -64,12 +63,12 @@ const MainContainer = (props) => {
                     </div>
                 </Route>
             </Switch>
-        : 
+
+    )} else return(
         <div>
             <h4>Loading...</h4>
             <img src="/loading.gif" alt="Loading..."/>
-        </div>
-                    
+        </div>                
     )
 }
 export default MainContainer;
