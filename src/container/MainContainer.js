@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
     Switch,
     Route
@@ -36,16 +36,26 @@ const MainContainer = (props) => {
     }
 
     return(
-        <Switch>
-            <Route path="/recipes/:id" render={recipeShowObj}/>
+        props.recipes.length ?
+            <Switch>
+                <Route path="/recipes/:id" render={recipeShowObj}/>
 
-            <Route exact path="/recipes">
-                <div className="main-container" >
-                    <CarouselContainer carouselRecipes = {carouselRecipes} />
-                    <MainRecipeContainer categories={categories} />
-                </div>
-            </Route>
-        </Switch>
+                <Route exact path="/recipes">
+                    <div className="main-container" >
+                        <Fragment>
+                            <CarouselContainer carouselRecipes = {carouselRecipes} />
+                            <MainRecipeContainer categories={categories} />
+                        </Fragment>
+
+                    </div>
+                </Route>
+            </Switch>
+        : 
+        <div>
+            <h4>Loading...</h4>
+            <img src="/loading.gif" alt="Loading..."/>
+        </div>
+                    
     )
 }
 export default MainContainer;
