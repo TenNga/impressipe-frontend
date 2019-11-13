@@ -39,7 +39,7 @@ const MainContainer = (props) => {
     const carouselRecipes = [twentyMinRecipe, partyTime, ingFiveOnly]
     const categories = [nonVeg, veg,vegan,diary_free,gluten_free,keto]
 
-    const recipeShowObj = (routerProps) => {
+    const recipeShow = (routerProps) => {
         if(props.recipes.length){
         let recipe = props.recipes.find(recipe=>recipe.id === +(routerProps.match.params.id))
         if(recipe) {
@@ -53,7 +53,7 @@ const MainContainer = (props) => {
     if(props.recipes.length){
     return(
             <Switch>
-                <Route path="/recipes/:id" render={recipeShowObj}/>
+                <Route path="/recipes/:id" render={recipeShow}/>
 
                 <Route exact path="/recipes">
                     <div className="main-container" >
