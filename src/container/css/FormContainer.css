@@ -27,14 +27,52 @@
     cursor: default;
 }
 
+.form-button-container{
+    width: 35vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 53vh;
+}
+
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-top: 5vh;
+    margin-left: 8vw
+}
+
 .form{
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    margin-top: 10vh;
-    margin-left: 8vw
+}
+
+.form-image-box{
+    height:42vh;
+    width:34vw;
+    border: 2px dotted;
+}
+
+.form-image-box img{
+    object-fit: cover;
+    height:100%;
+    width:100%;
+}
+
+#form-image{
+    width:28.7vw;
 }
 
 textarea {
+    height:28vh;
+    width:34vw;
     resize: none !important;
   }
+
+#author-header{
+    margin-top:2.5vh;
+}
