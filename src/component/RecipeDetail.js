@@ -9,7 +9,13 @@ class RecipeDetail extends React.Component {
     state={
         formToggle: false,
         image_url: "",
-        newComment: {}
+        newComment: null
+    }
+
+    setNewComment = (comment) => {
+        this.setState({
+            newComment: comment
+        })
     }
 
     getStepText = (num) => {
@@ -40,11 +46,12 @@ class RecipeDetail extends React.Component {
     }
 
     render(){
+        console.log(this.state.newComment)
         const { recipe, stepNum } = this.props
         return(
             recipe ? 
                 <Fragment>
-                    {this.state.formToggle ? <FormContainer img={this.state.image_url} closeModal={this.toggleModal}/>: null}
+                    {this.state.formToggle ? <FormContainer setNewComment={this.setNewComment} recipeId={this.props.recipe.id} img={this.state.image_url} closeModal={this.toggleModal}/>: null}
                     <div className="single-recipe-detail-container">
                         <h1>{recipe.name}</h1>
                         <div className="step">
