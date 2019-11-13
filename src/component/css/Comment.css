@@ -1,0 +1,28 @@
+
+
+.comments {
+    background: rgba(165, 165, 165, 0.42);
+    padding: 10px;
+    height: 20%;
+    display: flex;
+}
+.comment-body{
+    padding-left: 15px;
+}
+
+
+
+.comments h4{
+    font-size: 14px;
+    font-weight: bolder;
+    color: wheat;
+}
+.comments img {
+    width: 150px;
+    height: 100px;
+}
+
+.comments img:hover {
+    transform-style: preserve-3d;
+    transform: scale(2);
+}

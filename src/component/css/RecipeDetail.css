@@ -4,7 +4,7 @@
 }
 .step {
     border-radius: 7px;
-    height: 90%;
+    /* height: 90%; */
     background-color: rgba(4, 93, 125, 0.482);
     padding: 1vw 7vw;
     text-align: left;
@@ -26,6 +26,19 @@
 .top-step{
     height: 40%;
 }
+h5{
+    padding-top: 20px;
+    color: white;
+    float: left;
+}
+#comment-btn{
+    padding: 0px;
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    float: right;
+}
 
 .text-button {
     margin-top: 5px;
@@ -35,44 +48,6 @@
     height: 20%;
     overflow-y: scroll;
 }
-
-.comments {
-    background: rgba(165, 165, 165, 0.42);
-    padding: 10px;
-    height: 20%;
-    display: flex;
-}
-.comment-body{
-    padding-left: 15px;
-}
-
-#comment-btn{
-    padding: 0;
-    margin: 0;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    float: right;
-}
-h5{
-    padding-top: 20px;
-    color: white;
-}
-.comments h4{
-    font-size: 14px;
-    font-weight: bolder;
-    color: wheat;
-}
-.comments img {
-    width: 150px;
-    height: 100px;
-}
-
-.comments img:hover {
-    transform-style: preserve-3d;
-    transform: scale(2);
-}
-
 
 .step-text {
     font-size: 1.5vw;

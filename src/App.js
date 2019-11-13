@@ -33,6 +33,7 @@ class App extends Component{
       <Router>
         <div className="lock">
             <img src="https://image.flaticon.com/icons/svg/35/35432.svg" alt="roate" />
+            <h1>Rotate Device!!!</h1>
           </div>
         <div className="App">
           
