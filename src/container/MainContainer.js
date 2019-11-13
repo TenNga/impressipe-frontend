@@ -7,6 +7,7 @@ import CarouselContainer from "./CarouselContainer"
 import MainRecipeContainer from './MainRecipeContainer';
 import RecipeShowContainer from './RecipeShowContainer';
 import FourOhFour from './FourOhFour'
+import './css/MainContainer.css'
 
 const MainContainer = (props) => {
 
@@ -66,9 +67,10 @@ const MainContainer = (props) => {
 
     )} else return(
         <div>
-            <h4>Loading...</h4>
-            <img src="/loading.gif" alt="Loading..."/>
-        </div>                
+            <h1>Loading...</h1>
+            <img src="/impressipe.gif" alt="Loading..."/>
+        </div>
+                    
     )
 }
 export default MainContainer;

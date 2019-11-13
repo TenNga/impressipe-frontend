@@ -17,7 +17,6 @@
     text-shadow: 1px 0.5px rgba(255, 255, 255, 0.632);
 }
 .step img {
-    margin: 5vh 0vh;
     width: 25vw;
     height: 30vh;
     border-radius: 4px;
@@ -25,6 +24,12 @@
 
 .step-text {
     font-size: 1.5vw;
+}
+
+.img-desc {
+    display: flex;
+    gap: 20px;
+    margin: 5vh 0;
 }
 
 .recipe-attributes {
