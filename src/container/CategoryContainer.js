@@ -9,10 +9,11 @@ const CategoryContainer = (props) => {
     const renderRecipeCard = () => {
         return recipes.recipes.map(recipe => {return(
             <Link to={"/recipes/" + recipe.id} key={recipe.name}>
-            <RecipeCard 
-                key = {recipe.id} 
-                recipe = {recipe} 
-                category={props.category.categoryName}/>
+                <RecipeCard 
+                    key = {recipe.id} 
+                    recipe = {recipe} 
+                    category={props.category.categoryName}
+                />
             </Link>
             )}
         )}

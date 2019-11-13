@@ -28,9 +28,13 @@
 }
 
 .form{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
     margin-top: 10vh;
+    margin-left: 8vw
 }
 
-.form-text{
-    margin-left: 8vw;
-}
+textarea {
+    resize: none !important;
+  }
