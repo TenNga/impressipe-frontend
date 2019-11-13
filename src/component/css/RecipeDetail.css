@@ -17,9 +17,13 @@
     text-shadow: 1px 0.5px rgba(255, 255, 255, 0.632);
 }
 .step img {
-    width: 25vw;
-    height: 30vh;
+    width: 50%;
+    height: 35%;
     border-radius: 4px;
+}
+
+.text-button {
+    height: 40%;
 }
 
 .step-text {

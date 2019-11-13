@@ -50,8 +50,12 @@ class RecipeDetail extends React.Component {
                             </div>
                             <h3>Step {stepNum}</h3>
                             <img src={recipe.image_url} alt={stepNum} />
-                            <p className="step-text">{this.getStepText(stepNum)}</p>
-                            <button onClick={this.toggleModal}>MODAL</button>
+                            <div className="text-button">
+                                <p className="step-text">{this.getStepText(stepNum)}</p>
+                                </div>
+                                <button onClick={this.toggleModal}>MODAL</button>
+                            
+                            
                         </div>
                     </div>
                 </Fragment>
