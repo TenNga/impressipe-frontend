@@ -20,17 +20,6 @@ class FormContainer extends React.Component {
     handleChildClick = (event) => {
         event.stopPropagation()
     }
-
-    // return(
-    //     // <div onClick={handleClick} className="form-container">
-    //     //     <div onClick={handleChildClick} className="form-div">
-    //     //     {props.img? <img src={props.img} /> :
-    //     //         <form className="form">
-    //     //             <textarea className="form-text" name="text" rows="10" cols="60"/>
-    //     //         </form>}
-    //     //     </div>
-    //     // </div>
-    // )
     handleInput = (event) => {
         this.setState({
             [event.target.name]: event.target.value
@@ -114,8 +103,7 @@ class FormContainer extends React.Component {
         return(
             <div onClick={this.handleClick} className="form-container">
                 <div onClick={this.handleChildClick} className="form-div">
-                {this.props.img? <img src={this.props.img} /> :
-                    this.renderScene() }
+                {this.renderScene() }
                 </div>
             </div>
         )

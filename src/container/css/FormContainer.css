@@ -45,14 +45,12 @@
     margin-left: 8vw
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .form-text{
     margin:0 auto;
     resize: none;
 }
-=======
-=======
+
 .form{
     display: flex;
     flex-direction: column;
@@ -75,17 +73,14 @@
     width:28.7vw;
 }
 
->>>>>>> 51466abb5124db3476b943753d67ff06f892be46
 textarea {
     height:28vh;
     width:34vw;
     resize: none !important;
   }
-<<<<<<< HEAD
->>>>>>> 1e1622dbb23126db549d3ef20b5418280a15e14b
-=======
+
 
 #author-header{
     margin-top:2.5vh;
 }
->>>>>>> 51466abb5124db3476b943753d67ff06f892be46
+

@@ -29,8 +29,7 @@ class RecipeDetail extends React.Component {
 
     toggleModal = (url) => {
         this.setState(prevProps => {return {
-             formToggle: !prevProps.formToggle,
-             image_url: url
+             formToggle: !prevProps.formToggle
             }})
     }
 
@@ -61,16 +60,19 @@ class RecipeDetail extends React.Component {
                                 <p className="step-text">{this.getStepText(stepNum)}</p>
                             </div>
                            <h5>Comments</h5>
+                           <button id="comment-btn" onClick={this.toggleModal}>+</button>
                             <div className="comments"> 
                             
-                                    <img onClick={()=>this.toggleModal("https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")} src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="foodImage" />
+                                    <img onClick={this.toggleModal} src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="foodImage" />
+
                                     <div className="comment-body">
                                         <h4>Pongo</h4>
                                     <p>Had dinner with girl friends. Menu is perfect, something for everyone. Service was awesome and Jason was very accommodating. Will be back definitely!</p>
                                     </div>
                                     
+                                    
                             </div>
-                                <button onClick={this.toggleModal}>MODAL</button>
+                                
                         </div>
                     </div>
                 </Fragment>
