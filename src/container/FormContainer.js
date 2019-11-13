@@ -1,11 +1,15 @@
 import React from 'react'
 import './css/FormContainer.css'
+import StarRatingComponent from 'react-star-rating-component'
 
 class FormContainer extends React.Component {
 
     state={
         text: "",
-        
+        rating: 0,
+        imageUrlField: "",
+        imageUrl: "",
+        author:"",
         scene: 1
     }
 
@@ -27,35 +31,68 @@ class FormContainer extends React.Component {
     //     //     </div>
     //     // </div>
     // )
-    inputText = (event) => {
+    handleInput = (event) => {
         this.setState({
-            text: event.target.value
+            [event.target.name]: event.target.value
         })
     }
 
-    scene1 = () => {
+    handleStarInput = (nextValue) => {
+        this.setState({rating: nextValue});
+      }
+
+    handleImageSubmit = (event) => {
+        event.preventDefault();
+        if(!this.state.imageUrl){
+            this.setState({
+                imageUrl: this.state.imageUrlField
+        })
+        }else{
+            this.setState({
+                imageUrl: "",
+                imageUrlField: ""
+            })
+        }
+    }
+
+    textScene = () => {
         return (
-        <form className="form">
-            <h2>Leave a Comment...</h2>
-            <textarea value={this.state.text} onChange={this.inputText} className="form-text" name="text" rows="10" cols="60"/>
-        </form>
+        <div className="form-box">
+            <form className="form">
+                <h2>How Was It?</h2>
+                <StarRatingComponent value={this.state.rating} name="rating" onStarClick={this.handleStarInput}/>
+                <textarea value={this.state.text} onChange={this.handleInput} id="form-text" name="text"/>
+                <h2 id="author-header">What's Your Name?</h2>
+                <input name="author" value={this.state.author} onChange={this.handleInput}/>
+            </form>
+            <div className="form-button-container">
+                <button className="form-button" onClick={this.modalSubmit}>Post</button>
+                <button className="form-button" onClick={this.decrementScene}>Previous</button>
+            </div>
+        </div>
         )
     }
 
-    scene2 = () => {
+    imageScene = () => {
         return(
-            <h1>Hi</h1>
+            <div className="form-box">
+                <h2>Show Us Your Take</h2>
+                <form onSubmit={this.handleImageSubmit}>
+                    <input onChange={this.handleInput} value={this.state.imageUrlField} id="form-image" name="imageUrlField"/>
+                    <input type="submit" value={this.state.imageUrl? "Remove" : "Upload"}/>
+                </form>
+                <div className="form-image-box">
+                    {this.state.imageUrl? <img src={this.state.imageUrl} alt="user-upload" className="comment-image"/>:null}
+                </div>
+                <div className="form-button-container">
+                    <button className="form-button" onClick={this.incrementScene}>{this.state.imageUrl?"Next":"Skip"}</button>
+                </div>
+            </div>
         )
     }
 
-    scene3 = () => {
-        return(
-            <h1>Hello</h1>
-        )
-    }
 
-
-    scenes = [this.scene1, this.scene2, this.scene3]
+    scenes = [this.imageScene, this.textScene]
 
     renderScene = () => {
         return this.scenes[this.state.scene-1]()
@@ -77,11 +114,8 @@ class FormContainer extends React.Component {
         return(
             <div onClick={this.handleClick} className="form-container">
                 <div onClick={this.handleChildClick} className="form-div">
-                    {this.renderScene()}
-                    <div className="form-button-container">
-                        {this.state.scene > 1 ? <button onClick={this.decrementScene}>Previous</button> : null}
-                        {this.state.scene !== this.scenes.length ? <button onClick={this.incrementScene}>Next</button> : null}
-                    </div>
+                {this.props.img? <img src={this.props.img} /> :
+                    this.renderScene() }
                 </div>
             </div>
         )
