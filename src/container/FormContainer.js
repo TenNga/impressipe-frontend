@@ -20,7 +20,6 @@ class FormContainer extends React.Component {
     handleChildClick = (event) => {
         event.stopPropagation()
     }
-
     handleInput = (event) => {
         this.setState({
             [event.target.name]: event.target.value
