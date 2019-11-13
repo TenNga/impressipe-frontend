@@ -37,12 +37,13 @@ class RecipeDetail extends React.Component {
 
     toggleModal = (event, url) => {
         this.setState(prevProps => {return {
-             formToggle: !prevProps.formToggle
+             formToggle: !prevProps.formToggle,
+             image_url: url
             }})
     }
 
     renderComment = () => {
-        return this.props.recipe.comments.map(comment => <Comment comment={comment}/>)
+        return this.props.recipe.comments.map(comment => <Comment toggleModal={this.toggleModal} key={comment.id} comment={comment}/>)
     }
 
     render(){
@@ -72,11 +73,14 @@ class RecipeDetail extends React.Component {
                             <div className="text-button">
                                 <p className="step-text">{this.getStepText(stepNum)}</p>
                             </div>
-                           <h5>Comments</h5>
-                           <button id="comment-btn" onClick={this.toggleModal}>+</button>
-                           <div className="comment-container">
-                              {this.renderComment()}
-                           </div>
+                            <div id="comments-headers">
+                                <h4>Comments</h4>
+                                <button id="comment-btn" onClick={this.toggleModal}>+</button>
+                            </div>
+                            <div className="comment-container">
+                                {this.state.newComment? <Comment toggleModal={this.toggleModal} comment={this.state.newComment}/>:null}
+                                {this.renderComment()}
+                            </div>
                         </div>
                     </div>
                 </Fragment>

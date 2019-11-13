@@ -61,7 +61,10 @@ class FormContainer extends React.Component {
         }
         fetch("http://localhost:3000/api/v1/comments", fetchObj)
         .then(res=>res.json())
-        .then(this.props.setNewComment)
+        .then((comment)=>{
+            this.props.setNewComment(comment)
+            this.props.closeModal()
+        })
     }
 
     textScene = () => {

@@ -26,18 +26,18 @@
 .top-step{
     height: 40%;
 }
-h5{
-    padding-top: 20px;
+#comments-headers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     color: white;
-    float: left;
+    margin-top: 20px;
 }
 #comment-btn{
     padding: 0px;
-    margin: 20px;
     width: 30px;
     height: 30px;
     text-align: center;
-    float: right;
 }
 
 .text-button {
