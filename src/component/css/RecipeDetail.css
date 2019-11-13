@@ -17,13 +17,51 @@
     text-shadow: 1px 0.5px rgba(255, 255, 255, 0.632);
 }
 .step img {
-    width: 50%;
-    height: 35%;
+    width: 30%;
+    height: auto;
+    object-fit: cover;
     border-radius: 4px;
 }
 
-.text-button {
+.top-step{
     height: 40%;
+}
+
+.text-button {
+    margin-top: 5px;
+    padding: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.523);
+    border-radius: 8px;
+    height: 20%;
+    overflow-y: scroll;
+}
+
+.comments {
+    background: rgba(165, 165, 165, 0.42);
+    padding: 10px;
+    height: 20%;
+    display: flex;
+}
+.comment-body{
+    padding-left: 15px;
+}
+h5{
+    padding-top: 20px;
+    color: white;
+}
+.comments h4{
+    font-size: 14px;
+    font-weight: bolder;
+    color: wheat;
+}
+.comments img {
+    width: 150px;
+    height: 100px;
+}
+
+.comments img:hover {
+    transform-style: preserve-3d;
+    transform: scale(2);
 }
 
 .step-text {

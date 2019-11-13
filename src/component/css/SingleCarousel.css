@@ -17,7 +17,7 @@ button{
     width: 90vw;
     height: 27rem;
     object-fit: cover;
-    
+   object-position: center -60vh;
 }
 
 @media only screen and (max-width: 600px) {

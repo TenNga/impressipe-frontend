@@ -14,9 +14,10 @@ const FormContainer = (props) => {
     return(
         <div onClick={handleClick} className="form-container">
             <div onClick={handleChildClick} className="form-div">
+            {props.img? <img src={props.img} /> :
                 <form className="form">
                     <textarea className="form-text" name="text" rows="10" cols="60"/>
-                </form>
+                </form>}
             </div>
         </div>
     )
