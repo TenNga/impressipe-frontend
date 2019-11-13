@@ -45,6 +45,26 @@ class FormContainer extends React.Component {
         }
     }
 
+    modalSubmit = () => {
+        const fetchObj = {
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json",
+                "Accept":"application/json"
+            },
+            body: JSON.stringify({
+                text: this.state.text,
+                rating: this.state.rating,
+                author: this.state.author,
+                image_url: this.state.imageUrl, 
+                recipe_id: this.props.recipeId
+            })
+        }
+        fetch("http://localhost:3000/api/v1/comments", fetchObj)
+        .then(res=>res.json())
+        .then(this.props.setNewComment)
+    }
+
     textScene = () => {
         return (
         <div className="form-box">
@@ -68,7 +88,7 @@ class FormContainer extends React.Component {
             <div className="form-box">
                 <h2>Show Us Your Take</h2>
                 <form onSubmit={this.handleImageSubmit}>
-                    <input onChange={this.handleInput} value={this.state.imageUrlField} id="form-image" name="imageUrlField"/>
+                    <input placeholder="Paste a URL here..." onChange={this.handleInput} value={this.state.imageUrlField} id="form-image" name="imageUrlField"/>
                     <input type="submit" value={this.state.imageUrl? "Remove" : "Upload"}/>
                 </form>
                 <div className="form-image-box">
@@ -101,11 +121,10 @@ class FormContainer extends React.Component {
     }
 
     render(){
-        console.log(this.props.img)
         return(
             <div onClick={this.handleClick} className="form-container">
                 <div onClick={this.handleChildClick} className="form-div">
-                {this.props.img? <img src={this.props.img} /> :
+                {this.props.img? <img alt="comment-upload" src={this.props.img} /> :
                     this.renderScene() }
                 </div>
             </div>
