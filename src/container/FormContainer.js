@@ -100,6 +100,7 @@ class FormContainer extends React.Component {
     }
 
     render(){
+        console.log(this.props.img)
         return(
             <div onClick={this.handleClick} className="form-container">
                 <div onClick={this.handleChildClick} className="form-div">
