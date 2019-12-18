@@ -27,6 +27,6 @@ Following Step are instructure to run the project locally
 - Displaying tools and ingredient needed for current step makes it way more efficient to follow
 - Forget about showing lots of unwanted information in one page and welcome clean and eye catching design
 
-### 'Demo'
+### 'Gif Demo'
 ![](demo.gif)
 
