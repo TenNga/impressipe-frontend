@@ -59,7 +59,7 @@ class FormContainer extends React.Component {
                 recipe_id: this.props.recipeId
             })
         }
-        fetch("http://localhost:3000/api/v1/comments", fetchObj)
+        fetch("https://peaceful-scrubland-88868.herokuapp.com/api/v1/comments", fetchObj)
         .then(res=>res.json())
         .then((comment)=>{
             this.props.setNewComment(comment)

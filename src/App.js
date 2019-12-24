@@ -13,7 +13,7 @@ import FourOhFour from './container/FourOhFour';
 
 class App extends Component{
 
-  URL="http://localhost:3000/api/v1/recipes"
+  URL="https://peaceful-scrubland-88868.herokuapp.com/api/v1/recipes"
 
   state = {
     recipes: [],
