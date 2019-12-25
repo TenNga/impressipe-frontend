@@ -26,7 +26,8 @@ Following Step are instructure to run the project locally
 - Easy to understand by showing only one step at a time
 - Displaying tools and ingredient needed for current step makes it way more efficient to follow
 - Forget about showing lots of unwanted information in one page and welcome clean and eye catching design
-
+### Try it out here
+[Live Demo](https://agile-forest-99341.herokuapp.com/recipes)
 ### 'Gif Demo'
 ![](demo.gif)
 
